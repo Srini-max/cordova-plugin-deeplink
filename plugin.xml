@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="com.gems.deeplink"
+	version="6.1.6">
+
+    <name>startApp</name>
+    <description>cordova plugin for check or launch other application in android & iOS device.</description>
+    <license>MIT</license>
+    <keywords>cordova,startapp</keywords>
+
+    <js-module src="www/startApp.js" name="startapp">
+        <merges target="startApp" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="startApp">
+                <param name="android-package" value="com.gems.deeplink.startApp"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/startApp.java" target-dir="src/com/gems/deeplink" />
+        <source-file src="src/android/Assets.java" target-dir="src/com/gems/deeplink" />
+        <source-file src="src/android/res/xml/file_paths.xml" target-dir="res/xml" />
+    </platform>
+
+
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="startApp">
+				<param name="ios-package" value="startApp"/>
+			</feature>
+		</config-file>
+		
+		<header-file src="src/ios/startApp.h"/>
+		<source-file src="src/ios/startApp.m"/>
+		 <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+		    <array>
+			<string>zoomus</string>
+			<string>com.gems.gcapplepay</string>
+			<string>zoomus</string>    
+		 	<string>com.gems.classroom</string>
+		    </array>
+		</config-file>
+	</platform>
+
+
+</plugin>

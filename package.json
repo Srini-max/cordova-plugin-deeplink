@@ -1,0 +1,26 @@
+{
+  "name": "com.max.deeplink",
+  "version": "6.1.6",
+  "description": "cordova plugin for check or launch other application in android device.",
+  "cordova": {
+    "id": "com.gems.deeplink",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srini-max/cordova-deeplink"
+  },
+  "keywords": [
+    "cordova",
+    "startapp",
+    "cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Srini-max/cordova-deeplink"
+}
